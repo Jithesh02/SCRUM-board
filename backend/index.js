@@ -9,7 +9,7 @@ app.use(bodyParser.json({ limit: '30mb', extended: true })) // parses the incomi
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public')); // accesses html, css, images from pubic folder
 
-const PORT = 8000
+const PORT = 2020
 
 url = 'mongodb+srv://testing:test123@cluster0.eboi2ye.mongodb.net/' // temp db link
 
