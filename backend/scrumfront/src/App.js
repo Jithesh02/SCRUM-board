@@ -2,12 +2,13 @@ import React from 'react';
 import styled from 'styled-components'
 import Nav from './containers/Nav';
 import Sidebar from './containers/Sidebar';
-
+import { useState } from 'react';
 function App() {
+  const [sideBarCollapse, setSideBarCollapse] = useState(false);
   return (
     <AppContainer>
-      <Nav />
-      <Sidebar />
+      <Nav setSideBarCollapse={setSideBarCollapse} sideBarCollapse={sideBarCollapse} />
+      {sideBarCollapse && <Sidebar />}
     </AppContainer>
   );
 }
