@@ -1,0 +1,6 @@
+input[type="text"] {
+    -webkit-appearance: none; /* Disable default styling for WebKit browsers */
+    -moz-appearance: none; /* Disable default styling for Mozilla browsers */
+    appearance: none; /* Disable default styling for other browsers */
+  }
+  
