@@ -1,12 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
-import Button from './Button'
+import Button from '../common-components/Button'
 import PropTypes from 'prop-types'
 import { TfiAlignJustify } from "react-icons/tfi";
 
   const Nav = ({setSideBarCollapse,sideBarCollapse}) => {
     const style1 = {
       bgcolor:'#599afe',
+      width:'fit-content',
     }
     console.log('jj',sideBarCollapse)
   return (

@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-import Heading from '../common components/Heading';  
-import Input from '../common components/Input';
-import Button from '../containers/Button';
+import Heading from '../common-components/Heading';  
+import Input from '../common-components/Input';
+import Button from '../common-components/Button';
 
 const loginComponent = () => {
 
