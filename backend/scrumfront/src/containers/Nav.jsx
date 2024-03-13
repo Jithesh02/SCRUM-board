@@ -1,10 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
-import Button from './Button'
+import Button from '../common-components/Button'
 import PropTypes from 'prop-types'
 import { TfiAlignJustify } from "react-icons/tfi";
 
   const Nav = ({setSideBarCollapse,sideBarCollapse}) => {
+    const style1 = {
+      bgcolor:'#599afe',
+      width:'fit-content',
+    }
     console.log('jj',sideBarCollapse)
   return (
     <NavContainer>
@@ -18,7 +22,7 @@ import { TfiAlignJustify } from "react-icons/tfi";
         <a href="#">Teams</a>
         <a href="#">Plans</a>
         <a href="#">Apps</a>
-        <Button bgcolor='#599afe'>Create</Button>
+        <Button style={style1}>Create</Button>
       </NavLeft>
       <NavRight>
         <Search placeholder='Search' />
