@@ -3,11 +3,15 @@ const cors = require('cors'); // Allows access to permitted origins
 const bodyParser = require('body-parser'); // parse the request
 const connectDB = require('./db/connect'); // database connection
 
+const Users = require('./routes/user')
+
 const app = express();
 app.use(cors()); // allows for all origins
 app.use(bodyParser.json({ limit: '30mb', extended: true })) // parses the incoming request data into json into request.body
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public')); // accesses html, css, images from pubic folder
+
+app.use('/api/',Users)
 
 const PORT = 2020
 

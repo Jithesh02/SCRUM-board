@@ -2,26 +2,27 @@ import React from 'react'
 import styled from 'styled-components'
 import Button from '../common-components/Button'
 import PropTypes from 'prop-types'
+
 import { TfiAlignJustify } from "react-icons/tfi";
+import NavLinks from '../common-components/NavLinks'
 
   const Nav = ({setSideBarCollapse,sideBarCollapse}) => {
     const style1 = {
       bgcolor:'#599afe',
       width:'fit-content',
     }
+
+    const NavStyle = {
+      mr:'10px',
+      padding:'10px 5px'
+    }
+
     console.log('jj',sideBarCollapse)
   return (
     <NavContainer>
-      <TfiAlignJustify className='menuIcon' onClick={()=>setSideBarCollapse(!sideBarCollapse)}/>
       <NavLeft>
-        
-        <a href="#">Your Work</a>
-        <a href="#">Projects</a>
-        <a href="#">Filters</a>
-        <a href="#">Dashboards</a>
-        <a href="#">Teams</a>
-        <a href="#">Plans</a>
-        <a href="#">Apps</a>
+        <TfiAlignJustify className='menuIcon' onClick={()=>setSideBarCollapse(!sideBarCollapse)}/>
+        <NavLinks to='/yourwork' name="Your Work" style={NavStyle}/>
         <Button style={style1}>Create</Button>
       </NavLeft>
       <NavRight>
@@ -37,10 +38,6 @@ const NavContainer = styled.div`
     border-bottom: 1px solid #3a3a3a;
     padding: 10px;
 
-    a{
-      margin-right: 10px;
-      padding: 10px 5px;
-    }
     .menuIcon{
       margin-right: 10px;
       padding: 10px 5px;
@@ -52,7 +49,9 @@ const NavContainer = styled.div`
 `
 
 const NavLeft = styled.div`
-  
+  display: flex;
+  flex-direction: row;
+  align-content: center;
 `
 
 const NavRight = styled.div`
