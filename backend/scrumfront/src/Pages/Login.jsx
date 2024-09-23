@@ -1,22 +1,10 @@
 import React from 'react'
-import styled from 'styled-components'
+import LoginComponent from '../components/loginComponent'
 
 const Login = () => {
   return (
-    <LoginContainer>
-        <LoginBox>
-            
-        </LoginBox>
-    </LoginContainer>
+   <LoginComponent />
   )
 }
 
 export default Login
-
-const LoginContainer = styled.div`
-    
-`
-
-const LoginBox = styled.div`
-    
-`
